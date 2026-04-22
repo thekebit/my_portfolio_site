@@ -1,0 +1,304 @@
+/* ===== GLOBAL RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== BODY ===== */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #0b0b0b;
+    color: #f5f5f5;
+    line-height: 1.6;
+}
+
+/* ===== CONTAINER ===== */
+.container {
+    width: 85%;
+    margin: auto;
+}
+
+/* ===== HEADER ===== */
+header {
+    padding: 30px 0;
+    border-bottom: 1px solid #333;
+}
+
+/* Layout for header */
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Title */
+header h1 {
+    font-size: 32px;
+    letter-spacing: 2px;
+}
+
+/* Subtitle */
+header p {
+    color: #aaa;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/* ===== NAVBAR ===== */
+nav {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+nav a {
+    color: #f5f5f5;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    font-size: 14px;
+}
+
+/* Icons inside nav */
+nav a i {
+    margin-right: 6px;
+}
+
+/* Hover effect */
+nav a:hover {
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+
+/* ===== MAIN ===== */
+main {
+    padding: 40px 0;
+}
+
+/* ===== HERO SECTION ===== */
+.hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    margin-top: 40px;
+}
+
+/* Left side text */
+.hero-text {
+    flex: 1;
+}
+
+/* Big heading */
+.hero-text h2 {
+    font-size: 48px;
+    line-height: 1.1;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+/* Paragraph spacing */
+.hero-text p {
+    margin-bottom: 10px;
+    color: #ccc;
+}
+
+/* Right side image */
+.hero-image {
+    flex: 1;
+    text-align:right;
+}
+
+/* ===== PROFILE IMAGE ===== */
+.profile {
+    width: 260px;
+    border-radius: 12px;
+    border: 2px solid #333;
+    transition: transform 0.4s ease, box-shadow 0.4s ease, opacity 0.4s ease;
+}
+
+/* Hover animation */
+.profile:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    opacity: 0.95;
+}
+
+/* ===== SECTIONS ===== */
+section {
+    margin-top: 40px;
+}
+
+/* Section headings */
+h2 {
+    font-size: 22px;
+    border-bottom: 1px solid #333;
+    padding-bottom: 8px;
+    margin-bottom: 10px;
+}
+
+/* Icon spacing in headings */
+h2 i {
+    margin-right: 10px;
+}
+
+/* ===== LINKS ===== */
+a {
+    color: #ccc;
+    transition: 0.3s;
+}
+
+a:hover {
+    color: #ffffff;
+}
+
+/* ===== LISTS ===== */
+ul, ol {
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+/* ===== TABLE (DATA PAGE) ===== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #444;
+    padding: 10px;
+    text-align: left;
+}
+
+thead, tfoot {
+    background-color: #1a1a1a;
+}
+
+/* ===== FORM ===== */
+form {
+    max-width: 500px;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    background: #111;
+    border: 1px solid #444;
+    color: white;
+    margin-top: 5px;
+}
+
+/* Submit button */
+input[type="submit"] {
+    background: white;
+    color: black;
+    cursor: pointer;
+    margin-top: 20px;
+    border: none;
+    font-weight: bold;
+}
+
+/* Button hover */
+input[type="submit"]:hover {
+    background: #ddd;
+}
+
+/* ===== ASIDE ===== */
+aside {
+    margin-top: 40px;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    border-top: 1px solid #333;
+    color: #888;
+    margin-top: 40px;
+}
+        /* ── Wrap all content to match other pages ── */
+        header,
+        main,
+        footer {
+            width: 85%;
+            margin: auto;
+        }
+
+        /* ── Image grid — 2 columns max ── */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin-top: 20px;
+        }
+
+        /* ── Each card matches the dark theme ── */
+        .gallery-grid figure {
+            margin: 0;
+            background-color: #1a1a1a;
+            border: 1px solid #333;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .gallery-grid figure:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.08);
+        }
+
+        /* ── Images are uniform height, cropped from top ── */
+        .gallery-grid figure img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            object-position: top;
+            display: block;
+            border-bottom: 1px solid #333;
+            transition: opacity 0.3s ease;
+        }
+
+        .gallery-grid figure:hover img {
+            opacity: 0.85;
+        }
+
+        /* ── Captions match site text style ── */
+        .gallery-grid figcaption {
+            padding: 10px 14px;
+            font-size: 13px;
+            color: #aaa;
+            text-align: center;
+        }
+
+        /* ── Video section ── */
+        .video-figure {
+            max-width: 720px;
+            margin: 20px 0 0 0;
+            background-color: #1a1a1a;
+            border: 1px solid #333;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        video {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .video-figure figcaption {
+            padding: 10px 14px;
+            font-size: 13px;
+            color: #aaa;
+            text-align: center;
+            border-top: 1px solid #333;
+        }
